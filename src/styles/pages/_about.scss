@@ -1,0 +1,111 @@
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    gap: 4rem;
+
+    @media (max-width: 800px) {
+        flex-wrap: wrap;
+    }
+
+    .about-container-description {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        h2 {}
+
+        .about-subcontainer {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            @media (max-width: 800px) {
+                flex-direction: row;
+            }
+
+            @media (max-width: 670px) {
+                flex-direction: column;
+                img {
+                    
+                }
+            }
+        }
+
+        .about-description {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            h3 {
+                font-family: $font-header-poppins;
+                font-size: 30px;
+                font-weight: 300;
+                line-height: 45px;
+                letter-spacing: 0em;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                list-style: none;
+
+                li {
+                    font-family: Poppins;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 30px;
+
+
+
+                    span {
+                        font-family: Poppins;
+                        font-size: 20px;
+                        font-weight: 275;
+                        line-height: 30px;
+                    }
+                }
+            }
+
+            
+        }
+
+        img {
+            margin-top: 1rem;
+            width: 216px;
+            height: 216px;
+        }
+
+    }
+
+    .about-container-stack {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        h2 {}
+
+        .about-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            h3 {
+                font-family: $font-header-poppins;
+                font-size: 30px;
+                font-weight: 300;
+                line-height: 45px;
+                letter-spacing: 0em;
+            }
+
+            .about-stack-languages {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 2rem;
+            }
+        }
+    }
+}

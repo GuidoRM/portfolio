@@ -17,7 +17,7 @@ const Home = () => {
 
           <h2 className="home-title">Guido Mamani</h2>
 
-          <h2 className="home-subtitle">Software Developer</h2>
+          <h2 className="home-subtitle">Software Developer.</h2>
 
           <p className="home-description">
             I am a passionate fullstack developer with experience building complete web applications. My approach is to build technology solutions from the ground up, spanning both frontend and backend, to deliver exceptional user experiences.

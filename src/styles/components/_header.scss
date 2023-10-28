@@ -7,8 +7,14 @@ $borderRadius-header: 2rem;
     justify-content: space-between;
     position: fixed;
     width: 90%;
-    margin: 0 5%;
-    
+    max-width: 1600px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 999999;   
+    background-color: $body-color;
+    box-shadow: -20px 0px 20px 8px $body-color;    
+
     .header-container-logo {
         display: flex;
         align-items: center;
@@ -16,6 +22,14 @@ $borderRadius-header: 2rem;
         flex-wrap: wrap;
         gap: 1rem;
         text-decoration: none;
+
+
+        @media (max-width: 1245px) {
+            backdrop-filter: blur(40px);
+            border-radius: 2rem;
+            overflow: hidden;
+            padding-right: 1rem;
+        }
 
         .header-subcontainer {
             display: flex;
@@ -25,14 +39,14 @@ $borderRadius-header: 2rem;
             .header-container-title {
                 font-family: $font-header;
                 font-size: 20px;
-                font-weight: 400;
+                font-weight: 700;
                 color: $header-text-color;
             }
 
             .header-container-subtitle {
                 font-family: $font-header;
                 font-size: 16px;
-                font-weight: 400;
+                font-weight: 600;
                 color: $header-subtitle-color;
             }
         }
@@ -41,14 +55,19 @@ $borderRadius-header: 2rem;
     .header-container-nav {
         max-width: 650px;
         height: 55px;
-        background-color: #5E5E5E36;
+        background-color: #2b2b2b9e;
+        backdrop-filter: blur(120px);
         border-radius: $borderRadius-header;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
-        padding: 10px;
+        padding: 5px;
         border: 1px solid #5E5E5E36;
+
+        @media (max-width: 1245px) {
+            display: none;
+        }
 
         .header-container-nav-link {
             width: 155px;
@@ -100,6 +119,11 @@ $borderRadius-header: 2rem;
         justify-content: space-between;
         gap: 1rem;
 
+        @media (max-width: 1245px) {
+            display: none;
+        }
+
+
         a {
             text-decoration: none;
             font-family: $font-header;
@@ -109,6 +133,15 @@ $borderRadius-header: 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .header-container-button-social {
+
+            .header-container-button-social-link {
+                a {
+                    display: flex;
+                }
+            }
         }
     }
 }

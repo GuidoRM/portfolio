@@ -1,0 +1,18 @@
+.title-container {
+    color: $text-color;
+    font-family: $font-header-poppins;
+    font-weight: 600;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &::before {
+        content: "";
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        background-color: $text-color;
+        box-shadow: 0px 0px 20px 20px #9A9A9A40;
+    }
+}

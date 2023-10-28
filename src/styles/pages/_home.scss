@@ -1,11 +1,19 @@
 .home-container {
-    max-width: $width-container;
-    min-height: 100vh;
+    width: 100%;
+    height: calc(100vh - 100px);
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 6rem;
+    gap: 1rem;
+
+    @media (max-width: 1245px) {
+        justify-content: center;
+    }
+    
+    @media (max-width: 600px) {
+        flex-wrap: wrap;
+    }
 
     @keyframes rotar {
         from {
@@ -32,7 +40,6 @@
         position: relative;
         overflow: hidden;
         border-radius: 2rem;
-        min-width: 415px;
 
         .home-image {
             border-radius: 2rem;
@@ -40,6 +47,10 @@
             z-index: 2;
             background-color: #161616;
             transform: scale(0.99);
+
+            @media (max-width: 1245px) {
+                width: 350px;
+            }
         }
 
         &::before {
@@ -71,12 +82,27 @@
     .home-container-description {
         display: flex;
         flex-direction: column;
+        width: 60%;
+
+        @media (max-width: 600px) {
+            flex-direction: column-reverse;
+            width: 100%;
+        }
 
         h2 {
             font-size: 80px;
             font-family: $font-header-poppins;
             font-weight: bolder;
             line-height: 100px;
+
+            @media (max-width: 1245px) {
+                font-size: 50px;
+                line-height: 70px;
+            }
+
+            @media (max-width: 600px) {
+                display: none;
+            }
 
             &.home-title {
                 color: $text-color;
@@ -93,6 +119,12 @@
             font-family: $font-header-poppins;
             font-weight: lighter;
             margin-top: 1rem;
+
+            @media (max-width: 600px) {
+                margin: 1rem 0;
+                text-align: justify;
+                font-size: 20px;
+            }
         }
 
         .home-container-buttons {
@@ -102,6 +134,11 @@
             gap: 1rem;
             width: fit-content;
             margin-top: 1rem;
+
+            @media (max-width: 600px) {
+                justify-content: center;
+                width: 100%;
+            }
 
             a {
 
@@ -118,7 +155,7 @@
                 font-size: 20px;
                 font-family: $font-header-poppins;
                 font-weight: bold;
-                height: 70px;
+                height: 60px;
                 min-width: 200px;
                 display: flex;
                 align-items: center;
@@ -129,8 +166,8 @@
             }
 
             .home-button {
-                width: 70px;
-                height: 70px;
+                width: 60px;
+                height: 60px;
                 background-color: $button-background-color;
                 border-radius: 100%;
                 display: flex;

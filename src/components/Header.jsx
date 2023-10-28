@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom"
 import SvgArrowUp from "../assets/icons/SvgArrowUp"
 import SvgLogo from "../assets/icons/SvgLogo"
+import Menu from "./Menu"
 
 const Header = () => {
   return (
@@ -26,6 +27,8 @@ const Header = () => {
         <Link target="_blank" rel="noopener" to="https://www.linkedin.com/in/guidomamani">LinkedIn <SvgArrowUp /> </Link>
         <Link to={""}>Resume <SvgArrowUp /> </Link>
       </nav>
+
+      <Menu />
 
     </header>
   )

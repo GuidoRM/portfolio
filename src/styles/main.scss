@@ -4,6 +4,12 @@
 
 //Components
 @import "./components/header";
+@import "./components/title";
+@import "./components/menu";
+@import "./components/projectLayout";
+@import "./components/socialButton";
 
 //Pages
 @import "./pages/home";
+@import "./pages/about";
+@import "./pages/projects";
